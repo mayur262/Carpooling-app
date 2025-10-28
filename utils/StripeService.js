@@ -1,8 +1,12 @@
 // Use the web-compatible wrapper instead of direct imports
 import { StripeProvider, useStripe } from './StripeWebCompat';
 
-// Use hardcoded test key for now - replace with your actual test key
-const STRIPE_PUBLISHABLE_KEY = 'pk_test_51QQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQQ';
+// Read Stripe key from environment variable
+const STRIPE_PUBLISHABLE_KEY = process.env.EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY;
+
+if (!STRIPE_PUBLISHABLE_KEY) {
+  console.warn('⚠️ EXPO_PUBLIC_STRIPE_PUBLISHABLE_KEY not set in .env file');
+}
 
 // Stripe configuration
 export const stripeConfig = {

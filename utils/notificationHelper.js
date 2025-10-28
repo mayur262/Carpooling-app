@@ -3,7 +3,8 @@
  * Import this file anywhere you need to send notifications
  */
 
-const API_URL = 'http://10.0.2.2:3000'; // Change for iOS or real device
+// Read API URL from environment variable
+const API_URL = process.env.EXPO_PUBLIC_API_URL || 'http://localhost:3000';
 
 /**
  * Send booking status update notification
