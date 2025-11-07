@@ -594,8 +594,7 @@ npx expo run:android
 <div align="center">
 
 **Made with ❤️ by Mayur Naik**
-
-Final Year Project | Computer Engineering | 2024-2025
+GEC-GOA | 2025-2026
 
 [GitHub](https://github.com/mayurnaik32) • [Email](mailto:mayurnaik32@example.com)
 
